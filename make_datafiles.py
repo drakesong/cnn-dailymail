@@ -89,7 +89,7 @@ def tokenize_stories(stories_dir, tokenized_stories_dir):
 
 def read_text_file(text_file):
   lines = []
-  with open(text_file, "r") as f:
+  with open(text_file, "r", errors="ignore") as f:
     for line in f:
       lines.append(line.strip())
   return lines
